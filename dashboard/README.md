@@ -1,6 +1,6 @@
 # ESP GPS Tracker dashboard
 
-This dashboard follows the firmware contract in `ESP_configuration/ESP_Firmware.ino`:
+This dashboard follows the firmware contract in `firmware/ESP_Firmware.ino`:
 
 `ESP32 -> FastAPI -> Supabase`, with the React client reading only from FastAPI.
 
@@ -30,7 +30,7 @@ The ingestion endpoint is `POST /api/telemetry` with the firmware's `X-API-Key` 
 
 Use `--host 0.0.0.0` so the ESP32 can reach the API over the Wi-Fi LAN. The
 firmware currently targets `192.168.8.15:8001`; update that address in
-`ESP_configuration/ESP_Firmware.ino` if the computer's LAN address changes.
+`firmware/ESP_Firmware.ino` if the computer's LAN address changes.
 If Windows Firewall prompts for Python, allow it on the Private network.
 
 The ESP sends nearby Wi-Fi access points instead of requiring a GPS or
